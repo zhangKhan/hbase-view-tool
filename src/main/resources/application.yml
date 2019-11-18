@@ -1,0 +1,29 @@
+server:
+  #设置端口为8081
+  port: 8081
+  #设置项目名为:/boot
+  context-path: /hbaseViewTool
+  #设置jsp页面为热部署
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  mvc:
+    # 配置请求springmvc试图解析器  prefix设置请求头    suffix设置后缀
+    view:
+      prefix: /
+      suffix: .jsp
+#  jackson:
+#设置全局时间格式
+#    date-format: yyyy-MM-dd
+#设置市区为东8区   中国位于东8区
+#    time-zone: GMT+8
+#  http:
+#    multipart:
+#      max-file-size:
+#      max-request-size:
+#中文乱码问题
+#  http:
+#    encoding:
+#      charset: UTF-8
+#静态资源不需要处理  因为get方式springboot会先找静态资源然后找controller    post请求方式会直接进入控制器
